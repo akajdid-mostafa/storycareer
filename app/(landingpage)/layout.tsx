@@ -1,10 +1,11 @@
 import React from 'react'
+import Navbar from './_components/navbar'
 
 const LadingPageLayout  = ({children }:{children : React.ReactNode}) => {
   return (
     
     <div> 
-        navbar
+        <Navbar/>
         <main>
             {children}
         </main>
