@@ -105,7 +105,6 @@ const Navbar = () => {
                                     height={130}
                                     className='dark:block hidden'
                                 />
-
                             </SheetHeader>
                             <div className='flex flex-col items-start gap-y-3 my-10'>
                                 {NavLinks.map(({ href, label }) => (
