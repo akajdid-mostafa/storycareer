@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import Script from "next/script"; // Import the Script component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,7 +44,11 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
-          <script src="https://colt-data.vercel.app/api/track?token=76e50b55-1c34-4ac2-8824-45406cc815ff"></script>
+          {/* Use Next.js Script component with proper strategy */}
+          <Script 
+            src="https://colt-data.vercel.app/api/track?token=76e50b55-1c34-4ac2-8824-45406cc815ff"
+            strategy="afterInteractive"
+          />
         </body>
       </html>
     </ClerkProvider>
